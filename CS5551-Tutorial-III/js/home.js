@@ -17,7 +17,7 @@ myapp.config( function (TokenProvider) {
     } );
 } );
 myapp.controller( 'homeController', function ($scope, $http,$rootScope,$log, $window, Token, Facebook,$http,$location) {
-    $scope.accessToken = Token.get()
+    $scope.accessToken = Token.get();
     //  https://api.edamam.com/diet?q=chicken&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY}&from=0&to=3&calories=gte%20591,%20lte%20722&health=alcohol-free
     $scope.recipelist = new Array();
     $scope.venueList = new Array();
@@ -25,14 +25,16 @@ myapp.controller( 'homeController', function ($scope, $http,$rootScope,$log, $wi
     $scope.findRecipe = function () {
         //var end = document.getElementById('endlocation').value;
         alert( "hello" + $scope.recipe );
-        $http.get( 'https://api.nutritionix.com/v1_1/search/' + $scope.recipe + 'results=0:20&fields=item_name,brand_name,item_id,nf_calories&appId=9b4545fa&appKey=f8f5997239f42c04054fc4e2077b7437' ).success( function (data1) {
+        $http.get( 'https://api.nutritionix.com/v1_1/search/' + $scope.recipe + '?results=0:20&fields=item_name,brand_name,item_id,nf_calories,images_front_full_url&appId=9b4545fa&appKey=f8f5997239f42c04054fc4e2077b7437' ).success( function (data1) {
             console.log( data1 );
             for (var i = 0; i < data1.hits.length; i++) {
                 $scope.recipelist[i]= {
 
-                    "name": data1.hits[i].recipe.label,
-                    "url": data1.hits[i].recipe.url,
-                    "icon": data1.hits[i].recipe.image
+                    "name": data1.hits[i].fields.item_name,
+                    "brandname": data1.hits[i].fields.brand_name,
+                    "calories": data1.hits[i].fields.nf_calories,
+                    "url": data1.hits[i].fields.images_front_full_url//,
+                    //"icon": data1.hits[i].fields.images_front_full_url
                 };
             }
 
@@ -69,6 +71,14 @@ myapp.controller( 'homeController', function ($scope, $http,$rootScope,$log, $wi
                 alert("There was some error processing your request. Please try after some time.");
             });
         }
+    };
+
+    $scope.ibmSpeak =
+
+        function(){
+            var food = document.getElementById("recipe").value;
+            var speech = new Audio( "https://stream.watsonplatform.net/text-to-speech/api/v1/synthesize?username=7292093b-a70a-4d06-9c7b-9a8a71539c60&password=jR4LuuiDR2PX&text=" + food );
+            speech.play();
     };
 
 

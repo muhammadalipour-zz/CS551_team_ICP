@@ -133,7 +133,7 @@
                                         <input type="text" style="width: 44%;" class="name" id="recipe"
                                                ng-model="recipe" placeholder="Enter Food Name...">
                                         <input type="button" class="button" style="padding:9px 18px;"
-                                               ng-click="findRecipe();getVenues()" value="Find">
+                                               ng-click="findRecipe();getVenues();ibmSpeak();" value="Find">
                                     </fieldset>
                                 </form>
                             </div>
@@ -148,11 +148,14 @@
                                     <li ng-repeat="r in recipelist">
                                         <h4 class="widget-title">{{r.name}}</h4>
                                         <div class="partition-wrap">
-                                            <div class="partition1">
+                                            <oi class="partition1">Calories: Brand: </oi>
+                                            <oi class="partition1">{{r.calories}} {{r.brandname}}</oi>
+                                            <!--<div class="partition1">
                                                 <img ng-src="{{r.icon}}" style="width: 50px; height: 50px;" align="center"/>
                                             </div>
                                             <div class="partition2">
-                                                <a href="{{r.url}}"> {{r.url}}</a></div>
+                                                <a href="{{r.url}}"> {{r.url}}</a>
+                                            </div> -->
                                         </div>
                                     </li>
 
@@ -162,7 +165,7 @@
                         </div>
                         <div class="col-md-7 col-sm-7">
                             <div class="box-content">
-                                <h3 class="widget-title" style="font-weight: 600">Where To Get</h3>
+                                <h3 class="widget-title" style="font-weight: 600">Place to find</h3>
                                 <div style="margin-bottom: 20px;">
                                     <li ng-repeat="venue in venueList" style="margin-bottom: 10px;">
                                         <a  href="" ng-click="getReviews(venue)">{{venue.name}}</a>
