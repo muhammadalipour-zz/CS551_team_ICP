@@ -1,0 +1,7 @@
+#Fri Sep 14 20:55:41 CDT 2018
+base.0=/Users/muhammadali/Documents/UMKC/TranslateApp/TranslateApp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_5a8919b45805ee208265108cd4d5a5c4261b0f8b
+renamed.1=classes.dex
+renamed.0=classes2.dex
+file.1=/Users/muhammadali/Documents/UMKC/TranslateApp/TranslateApp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_e688ad34f511e5ff9daa555a183e039d8c7d9c4a/classes.dex
+base.1=/Users/muhammadali/Documents/UMKC/TranslateApp/TranslateApp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_e688ad34f511e5ff9daa555a183e039d8c7d9c4a
+file.0=/Users/muhammadali/Documents/UMKC/TranslateApp/TranslateApp/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_5a8919b45805ee208265108cd4d5a5c4261b0f8b/classes.dex

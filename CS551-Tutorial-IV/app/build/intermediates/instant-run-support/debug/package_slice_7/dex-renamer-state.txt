@@ -1,0 +1,4 @@
+#Fri Sep 14 20:49:18 CDT 2018
+base.0=/Users/muhammadali/Documents/UMKC/TranslateApp/TranslateApp/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7
+renamed.0=classes.dex
+file.0=/Users/muhammadali/Documents/UMKC/TranslateApp/TranslateApp/app/build/intermediates/transforms/dex/debug/folders/1000/5/slice_7/classes.dex
