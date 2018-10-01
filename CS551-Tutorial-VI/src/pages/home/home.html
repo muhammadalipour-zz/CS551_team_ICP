@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title >
+        <p align="center" hideBackButton >
+            Login Page
+        </p>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+    <ion-grid >
+
+        <ion-row justify-content-center >
+            <ion-col col-2 >
+                  <ion-item >
+                    <ion-input type="text" placeholder="Username" [(ngModel)]="usrname" ></ion-input>
+                  </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row justify-content-center>
+            <ion-col col-2>
+                  <ion-item>
+                    <ion-input type="password" placeholder="Password" [(ngModel)]="pwd"></ion-input>
+                  </ion-item>
+            </ion-col>
+        </ion-row>
+        <ion-row justify-content-center >
+            <ion-col col-1  >
+                <button margin-left ion-button (click)='signIn();' >Sign in</button>
+            </ion-col>
+            <ion-col col-1  >
+                <button  ion-button (click)='Register();' >Register</button>
+            </ion-col>
+        </ion-row>
+        <ion-row justify-content-center >
+            
+        </ion-row>
+        
+
+    </ion-grid>
+<!--
+  The world is your oyster.
+  <p>
+    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+  </p>
+-->
+</ion-content>
