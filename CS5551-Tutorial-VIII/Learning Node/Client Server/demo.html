@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+   
+</head>
+<body>
+
+</body>
+</html>
+ <script>
+        $(document).ready(function() {
+        var hello= "yellow yell";
+        $.getJSON('https://api.uclassify.com/v1/uclassify/sentiment/classify/?readKey=zp3PVGoy6XnZ&text=hello', function(Results) {
+            document.write(Results.negative);
+        });
+    });
+    </script>
